@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/main"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/leftMain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/aboveMain"
+        android:background="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/aboveMain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/main"
+        android:layout_centerHorizontal="true"
+        android:background="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/aboveMain"
+        android:background="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/main"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/main"
+        android:background="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/bottomMain"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/main"
+        android:layout_centerInParent="true"
+        android:background="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/leftMain"
+        android:layout_toStartOf="@+id/main"
+        android:background="@color/black">
+
+    </TextView>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/leftMain"
+        android:layout_toStartOf="@+id/main"
+        android:background="@color/black">
+
+    </TextView>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/main"
+        android:layout_toRightOf="@+id/aboveMain"
+        android:layout_centerHorizontal="true"
+        android:background="@color/black">
+
+    </TextView>
+</RelativeLayout>
