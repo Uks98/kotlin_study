@@ -49,6 +49,8 @@
 
             android:layout_width="12dp"
             android:layout_height="21dp"
+            android:layout_marginRight="14dp"
+
             android:src="@drawable/logo_fb2">
         </ImageView>
         <TextView
@@ -60,7 +62,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="페이스북 계정으로 로그인"
-            android:textSize="14dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="14dp"
+
             android:textColor="@color/white"
             >
         </TextView>
@@ -79,12 +83,13 @@
         tools:ignore="MissingConstraints">
 
         <ImageView
-
+            android:layout_marginRight="14dp"
             android:layout_width="21dp"
             android:layout_height="21dp"
             android:src="@drawable/logo_kt">
         </ImageView>
         <TextView
+            
             android:layout_width="1dp"
             android:layout_height="24dp"
             android:background="@color/white">
@@ -93,7 +98,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="카카오 계정으로 로그인"
-            android:textSize="17dp"
+            android:textSize="16dp"
+            android:layout_marginLeft="14dp"
+
             android:textColor="@color/white">
         </TextView>
 
