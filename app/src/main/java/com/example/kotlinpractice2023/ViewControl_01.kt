@@ -1,8 +1,10 @@
 package com.example.kotlinpractice2023
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 
@@ -30,6 +32,12 @@ class ViewControl_01 : AppCompatActivity() {
         var saveNum : String = ""
         var res : String = ""
 
+        val intent = intent
+        val stringData : String? = intent.extras?.getString("extra")
+
+        if(stringData != null){
+            Log.d("hashs",stringData)
+        }
         plus.setOnClickListener {
             saveNum = numbers
             numbers = ""

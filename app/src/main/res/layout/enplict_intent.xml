@@ -21,4 +21,12 @@
         android:gravity="center"
         android:background="@color/purple_200">
     </Button>
+    <TextView
+        android:id="@+id/intent_three"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="명시적 인텐트 + 결과"
+        android:gravity="center"
+        android:background="@color/purple_200">
+    </TextView>
 </androidx.appcompat.widget.LinearLayoutCompat>
