@@ -18,28 +18,30 @@ class Entent_example : AppCompatActivity() {
         val intent2 : Button = findViewById(R.id.next)
 //
 
-        (findViewById<TextView>(R.id.next)).apply {
-            this.setOnClickListener {
-                val intent =  Intent(this@Entent_example,ViewControl_01 :: class.java)
-                    intent.putExtra("extra","data - 1")
-                startActivity(intent)
-            }
-        }
-
-        //명시적 인텐트 + 결과받기
         (findViewById<TextView>(R.id.intent_three)).apply {
             this.setOnClickListener {
-                val intent =  Intent(this@Entent_example,ViewControl_01 :: class.java)
-                //intent.putExtra("extra","data - 1")
-               //  startActivity(intent)
-                //result code는 구분을 하기위함
+                val intent =  Intent(this@Entent_example,Intent_two_example :: class.java)
+                    //intent.putExtra("extra","data - 1")
                 startActivityForResult(intent,1)
             }
         }
+
+
 
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        when(requestCode){
+            1->{
+                when(resultCode){
+                    RESULT_OK ->{
+                        val data:String? = data?.extras?.getString("result")
+                        Log.d("dataaa",data!!)
+                    }
+                }
+            }
+        }
     }
 }
