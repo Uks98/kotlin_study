@@ -7,6 +7,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContract
+import androidx.activity.result.contract.ActivityResultContracts
 import org.w3c.dom.Text
 
 class Entent_example : AppCompatActivity() {
@@ -18,16 +22,21 @@ class Entent_example : AppCompatActivity() {
         val intent2 : Button = findViewById(R.id.next)
 //
 
-        (findViewById<TextView>(R.id.intent_three)).apply {
-            this.setOnClickListener {
-                val intent =  Intent(this@Entent_example,Intent_two_example :: class.java)
-                    //intent.putExtra("extra","data - 1")
-                startActivityForResult(intent,1)
+        val startActivityLauncher : ActivityResultLauncher<Intent> = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ){
+            (findViewById<TextView>(R.id.intent_four)).apply {
+                when(it.resultCode){
+                    RESULT_OK->{
+                        Log.d("dataa",it.data?.extras?.getString("result")!!)
+                    }
+                }
+
+                this.setOnClickListener {
+                    val intent =  Intent(this@Entent_example,Intent_two_example :: class.java)
+                }
             }
         }
-
-
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
